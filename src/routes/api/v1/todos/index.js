@@ -3,7 +3,8 @@ const { getAllTodos, createTodo,getTodoById } = require("../../../../controllers
 async function todoRouter(fastify,options){
     fastify.get('/',getAllTodos);
     fastify.post('/create',createTodo);
-    fastify.post('/:id',getTodoById);
+    fastify.get('/:id',getTodoById);
+    
 }
 
     
